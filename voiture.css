@@ -1,0 +1,100 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+  #gameContainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-sans);
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+  }
+  #gameCanvas {
+    display: block;
+    cursor: none;
+  }
+  #ui {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  #hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px 20px;
+  }
+  .hud-box {
+    background: rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 6px 14px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+  }
+  .hud-val {
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffd700;
+    line-height: 1.1;
+  }
+  #overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 20;
+  }
+  #overlay h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+  #overlay p { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 20px; text-align: center; line-height: 1.6; }
+  #startBtn {
+    background: #ffd700;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 36px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    pointer-events: all;
+    transition: transform 0.1s;
+  }
+  #startBtn:hover { transform: scale(1.05); }
+  #scoreBoard {
+    margin-top: 16px;
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  #speedBar {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  #speedLabel { color: rgba(255,255,255,0.6); font-size: 11px; }
+  #speedMeter {
+    width: 120px; height: 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  #speedFill {
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, #4caf50, #ffd700);
+    border-radius: 4px;
+    transition: width 0.5s;
+  }

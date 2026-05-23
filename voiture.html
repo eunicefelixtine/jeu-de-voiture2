@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="voiture.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="gameContainer">
+  <canvas id="gameCanvas"></canvas>
+  <div id="ui">
+    <div id="hud">
+      <div class="hud-box">
+        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:2px">SCORE</div>
+        <div class="hud-val" id="scoreDisp">0</div>
+      </div>
+      <div class="hud-box">
+        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:2px">TEMPS</div>
+        <div class="hud-val" id="timeDisp">0:00</div>
+      </div>
+      <div class="hud-box">
+        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:2px">VIES</div>
+        <div class="hud-val" id="livesDisp">❤️❤️❤️</div>
+      </div>
+    </div>
+    <div id="speedBar">
+      <span id="speedLabel">VITESSE</span>
+      <div id="speedMeter"><div id="speedFill"></div></div>
+    </div>
+  </div>
+  <div id="overlay">
+    <h2 id="overlayTitle">🏎️ ROAD RACER</h2>
+    <p id="overlayMsg">Utilisez <b>↑ ↓</b> pour accélérer / ralentir<br>et <b>← →</b> pour diriger la voiture.<br>Évitez les ⚫ boules rouges — collectez les 🟢 boules vertes !</p>
+    <button id="startBtn" onclick="startGame()">DÉMARRER</button>
+    <div id="scoreBoard" style="display:none"></div>
+  </div>
+</div>
+<script src="voiture.js"></script>
+</body>
+</html>
